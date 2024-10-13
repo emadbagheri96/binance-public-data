@@ -52,7 +52,7 @@ def download_monthly_klines(trading_type, symbols, num_symbols, intervals, years
                 download_file(checksum_path, checksum_file_name, date_range, folder)
 
     except Exception as e:
-      print(e.str)
+      print(e)
     current += 1
 
 def download_daily_klines(trading_type, symbols, num_symbols, intervals, dates, start_date, end_date, folder, checksum):
@@ -92,7 +92,7 @@ def download_daily_klines(trading_type, symbols, num_symbols, intervals, dates, 
               checksum_file_name = "{}-{}-{}.zip.CHECKSUM".format(symbol.upper(), interval, date)
               download_file(checksum_path, checksum_file_name, date_range, folder)
     except Exception as e:
-      print(e.str)
+      print(e)
   current += 1
 
 if __name__ == "__main__":
